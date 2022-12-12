@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i`
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -19,9 +21,9 @@ You will also see any lint errors in the console.
 In node_module/sf2-player/package.json - Change the follwing paths:
 
 "module": "./src/index.js",
-  "exports": {
-    "import": "./src/index.js"
-  }
+"exports": {
+"import": "./src/index.js"
+}
 
 ### `npm test`
 
