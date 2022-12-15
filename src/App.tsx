@@ -35,7 +35,7 @@ function App() {
   }
 
   const stop = (midiNum: number) => {
-    sf.noteOn(midiNum);
+    sf.noteOff(midiNum);
   }
 
   return (
@@ -74,7 +74,9 @@ function App() {
 
           <div id="keys">
             {
-              [...new Array(60)].map((_, i) => i + 30).map(midiNum => <button key={midiNum} onMouseDown={() => play(midiNum)} onMouseUp={() => sf.nodeOff(midiNum)}>{midiNum}</button>)
+              // [...new Array(60)].map((_, i) => i + 30).map(midiNum => <button key={midiNum} onMouseDown={() => play(midiNum)} onMouseUp={() => sf.nodeOff(midiNum)}>{midiNum}</button>)
+
+              [...new Array(60)].map((_, i) => i + 30).map(midiNum => <button key={midiNum} onMouseDown={() => play(midiNum)} onMouseUp={() => stop2(midiNum)}>{midiNum}</button>)
             }
           </div>
         </div> : <></>
